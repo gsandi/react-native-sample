@@ -1,0 +1,3 @@
+rootProject.name = 'Cbre'
+
+include ':app'
