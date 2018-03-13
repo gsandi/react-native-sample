@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#006064',
+    backgroundColor: '#455A64',
   },
   headerText: {
     fontFamily: 'roboto',
@@ -88,6 +88,6 @@ const styles = StyleSheet.create({
   signInButton: {
     width: 200,
     height: 48,
-    marginTop: 200,
+    marginTop: 200, 
   },
 });
