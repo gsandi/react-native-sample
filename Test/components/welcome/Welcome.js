@@ -4,7 +4,8 @@ import {
   StyleSheet,
   Text,
   Button,
-  View
+  View,
+  Image
 } from 'react-native';
 import  {StackNavigator} from 'react-navigation';
 
@@ -12,14 +13,26 @@ export default class Welcome extends Component {
     render() {
       return (
         <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to welcome!
+          <Text style={styles.header}>
+            Good After Noon Qays
           </Text>
-          <Button 
-          onPress={()=> {this.props.navigation.navigate('Login')}}
-          title="Sign Out"
-          >
-          </Button>
+          <View style={styles.imgContainer}>
+            <Image
+              uri=""
+            />
+          </View>
+          <View style={styles.buttonsWrapper}>
+            <Button 
+            onPress={()=> {this.props.navigation.navigate('Login')}}
+            title="Get Time"
+            color="#087f23">
+            </Button>
+            <Button 
+            onPress={()=> {this.props.navigation.navigate('Login')}}
+            title="Sign Out"
+            color="maroon">
+            </Button>
+          </View>
         </View>
       );
     }
@@ -30,16 +43,31 @@ export default class Welcome extends Component {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#F5FCFF',
+      backgroundColor: '#006064',
     },
-    welcome: {
-      fontSize: 20,
-      textAlign: 'center',
-      margin: 10,
+    header: {
+      flex: 1,
+      fontSize: 30,
+      marginTop: 30,
+      color: 'white'
     },
-    instructions: {
-      textAlign: 'center',
-      color: '#333333',
-      marginBottom: 5,
+    imgContainer: {
+      flex: 1,
+      width: 130,
+      backgroundColor: '#b2dfdb',
+      borderRadius: 240,
+      borderColor: '#4ebaaa',
+      borderWidth: 10
     },
+    buttonsWrapper: {
+      flex: 2,
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      marginTop: 100,
+      width:300,
+      flexDirection: 'row'
+    },
+    signOutButton: {
+      width: 100,
+    }
   });
