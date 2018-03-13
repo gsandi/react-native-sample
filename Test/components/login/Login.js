@@ -31,7 +31,7 @@ export default class Login extends Component {
     GoogleSignin.signIn()
     .then((user) => {
       this.setState({user: user});
-      self.props.navigation.navigate('Welcome');
+      self.props.navigation.navigate('Welcome' , {name: this.state.user.givenName, photo: this.state.user.photo });
     })
     .catch((err) => {
       console.log('WRONG SIGNIN', err);

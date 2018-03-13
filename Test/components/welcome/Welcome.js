@@ -11,16 +11,18 @@ import  {StackNavigator} from 'react-navigation';
 
 export default class Welcome extends Component {
     render() {
+      let pic = {
+        uri: this.props.navigation.state.params.photo
+      };
       return (
         <View style={styles.container}>
           <Text style={styles.header}>
-            Good After Noon Qays
+            Good After Noon {this.props.navigation.state.params.name}
           </Text>
-          <View style={styles.imgContainer}>
-            <Image
-              uri=""
-            />
-          </View>
+          <Image
+            style={styles.imgContainer}
+            source={pic}
+          />
           <View style={styles.buttonsWrapper}>
             <Button 
             onPress={()=> {this.props.navigation.navigate('Login')}}
@@ -54,10 +56,10 @@ export default class Welcome extends Component {
     imgContainer: {
       flex: 1,
       width: 130,
-      backgroundColor: '#b2dfdb',
-      borderRadius: 240,
+      height:100,
+      borderRadius: 100,
       borderColor: '#4ebaaa',
-      borderWidth: 10
+      borderWidth: 3
     },
     buttonsWrapper: {
       flex: 2,
