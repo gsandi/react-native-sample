@@ -5,9 +5,13 @@ import {
   Text,
   View
 } from 'react-native';
+import Button from 'react-native-button';
+import HeaderText from '../header-text/header-text'
+
 import  {StackNavigator} from 'react-navigation';
 import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
+//TODO: remove user session with sign out 
 
 export default class Login extends Component {
 
@@ -34,6 +38,7 @@ export default class Login extends Component {
       self.props.navigation.navigate('Welcome' , {name: this.state.user.givenName, photo: this.state.user.photo });
     })
     .catch((err) => {
+      alert(err)
       console.log('WRONG SIGNIN', err);
     })
     .done();
@@ -60,13 +65,16 @@ export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headerText}>
-          Hi There!! 
-          Please sign in!
-        </Text>
+        <HeaderText text='Hi There!! Please '/>
         <GoogleSigninButton 
           style={styles.signInButton}
-          onPress={this.handle.bind(this)}/>
+          onPress={this.handle.bind(this)}
+        />
+          <Button
+            style={styles.test}
+            onPress={() => alert('clicked')}>
+            Sign in with Google
+          </Button>
       </View>
     );
   }
@@ -79,15 +87,21 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#455A64',
   },
-  headerText: {
-    fontFamily: 'roboto',
-    fontSize: 30,
-    fontWeight: 'bold',
-    color: 'white'
-  },
   signInButton: {
     width: 200,
     height: 48,
-    marginTop: 200, 
-  },
+    marginTop: 50,
+  }, 
+  test: {
+    fontSize: 25,
+    padding: 10,
+    paddingRight:32,
+    paddingLeft:32,
+    marginTop: 25,
+    backgroundColor:'#d14836',
+    borderRadius: 6,
+    color: 'white',
+    textShadowOffset: {width: 0,height: 1}
+
+  }
 });

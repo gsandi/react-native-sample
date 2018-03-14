@@ -19,7 +19,6 @@ export default class Welcome extends Component {
 
   componentDidMount() {
      this.GetTime();
-     console.log('اي شي')
   }
   	
   GetTime() {
@@ -37,6 +36,11 @@ export default class Welcome extends Component {
     });
   };
 
+  getNotification(){
+    //TODO: Handle Error
+   return fetch('http://10.0.2.2:3000/get-notification')
+  }
+
   render() {
     let pic = {
       uri: this.props.navigation.state.params.photo
@@ -52,8 +56,8 @@ export default class Welcome extends Component {
         />
         <View style={styles.buttonsWrapper}>
           <Button 
-          onPress={()=> {this.props.navigation.navigate('Login')}}
-          title="Get Time"
+          onPress={this.getNotification}
+          title="Get Notification"
           color="#607D8B">
           </Button>
           <Button 
