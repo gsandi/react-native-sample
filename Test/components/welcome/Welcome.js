@@ -19,6 +19,7 @@ export default class Welcome extends Component {
 
   componentDidMount() {
      this.GetTime();
+     console.log('اي شي')
   }
   	
   GetTime() {
