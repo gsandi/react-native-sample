@@ -11,11 +11,10 @@ let registrationIds;
 const app = express();
 app.use(bodyParser.json());
 
-message.addData('title','The Time is:');
-message.addData('time', moment().format('hh:mm A'));
-message.delay_while_idle = 1;
-
 app.get('/get-notification', (req , res, next) => {
+  message.addData('title','The Time is:');
+  message.addData('time', moment().format('hh:mm A'));
+  message.delay_while_idle = 1;
   sender.send(message, registrationIds, 4, function (err, result) {
     console.log(result);
   });
