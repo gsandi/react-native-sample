@@ -7,12 +7,6 @@ import {pushNotification} from '../../services/push-notification.service.js';
 import styles from '../../style/style';
 
 export default class Welcome extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      time: ''
-    };
-  }
 
   componentWillMount() {
     pushNotification.init()
@@ -33,11 +27,10 @@ export default class Welcome extends React.Component {
   }
 
   signOut() {
-    GoogleSignin.signOut()
-    .then(() => {
+    GoogleSignin.signOut().then(() => {
       this.props.navigation.navigate('Logout')
     }).catch((err) => {
-      console.log(err)
+      console.error(err)
     });
   }
 
@@ -49,10 +42,8 @@ export default class Welcome extends React.Component {
         <Button onPress={this.getTimeNotification} style={styles.getNotificationButton}>
           Get Notification
         </Button>
-        <Button 
-        onPress={this.signOut.bind(this)}
-        style={styles.signOutButton}>
-        Sign Out
+        <Button onPress={this.signOut.bind(this)} style={styles.signOutButton}>
+          Sign Out
         </Button>
       </View>
     );
