@@ -29,8 +29,8 @@ export default class Welcome extends React.Component {
   signOut() {
     GoogleSignin.signOut().then(() => {
       this.props.navigation.navigate('Logout')
-    }).catch((err) => {
-      console.error(err)
+    }).catch( err => {
+      console.log('Sign out Error:', err)
     });
   }
 
