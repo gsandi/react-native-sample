@@ -1,12 +1,8 @@
-import React, { Component } from 'react';
-import {
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React from 'react';
+import {Text} from 'react-native';
 import styles from '../../style/style';
 
-export default class HeaderText extends Component {
+export default class HeaderText extends React.Component {
   render() {
     return (
         <Text style={styles.headerText}> {this.props.text} </Text>
