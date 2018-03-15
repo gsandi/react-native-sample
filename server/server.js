@@ -3,22 +3,19 @@ import bodyParser from 'body-parser';
 import gcm from 'node-gcm';
 import moment from 'moment';
 
-const app = express();
-
-app.use(bodyParser.json());
-
 const apiKey = 'AIzaSyCqMkYrSep6bhnT2Fst-8o6tNFd1vbmdeY';
 const sender = new gcm.Sender(apiKey);
 let message = new gcm.Message();
+let registrationIds;
+
+const app = express();
+app.use(bodyParser.json());
 
 message.addData('title','The Time is:');
 message.addData('time', moment().format('hh:mm A'));
 message.delay_while_idle = 1;
 
-let registrationIds;
-
 app.get('/get-notification', (req , res, next) => {
-  console.log(registrationIds)
   sender.send(message, registrationIds, 4, function (err, result) {
     console.log(result);
   });
@@ -26,6 +23,7 @@ app.get('/get-notification', (req , res, next) => {
 })
 
 app.post('/', (req , res, next) => {
+  console.log(req.body.token)
   if(!req.body.token) {
     return res.status(400)
   }
