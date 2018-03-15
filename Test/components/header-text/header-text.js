@@ -4,7 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
-
+import styles from '../../style/style';
 
 export default class HeaderText extends Component {
   render() {
@@ -12,14 +12,4 @@ export default class HeaderText extends Component {
         <Text style={styles.headerText}> {this.props.text} </Text>
     );
   }
-}
-
-const styles = StyleSheet.create({
-    headerText: {
-      fontFamily: 'roboto',
-      fontSize: 30,
-      fontWeight: 'bold',
-      color: 'white',
-      textShadowOffset: {width: 2,height: 2}
-    },
-  });
+};

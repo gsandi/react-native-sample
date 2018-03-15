@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import {
-  Platform,
-  StyleSheet,
   Text,
-  Button,
   View,
   Image
 } from 'react-native';
+import Button from 'react-native-button';
+import HeaderText from '../header-text/header-text';
+import {GoogleSignin} from 'react-native-google-signin';
 import  {StackNavigator} from 'react-navigation';
+import {pushNotification} from '../../services/push-notification.service.js';
+import styles from '../../style/style';
+
+pushNotification.init()
 
 export default class Welcome extends Component {
   constructor(props) {
@@ -36,68 +40,34 @@ export default class Welcome extends Component {
     });
   };
 
-  getNotification(){
-    //TODO: Handle Error
-   return fetch('http://10.0.2.2:3000/get-notification')
+  getTimeNotification(){
+    pushNotification.postToken();
+    pushNotification.getCurrentTime();
+  }
+
+  signOut() {
+    GoogleSignin.signOut()
+    .then(() => {
+      this.props.navigation.navigate('Logout')
+    }).catch((err) => {
+      console.log(err)
+    });
   }
 
   render() {
-    let pic = {
-      uri: this.props.navigation.state.params.photo
-    };
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>
-          {this.state.time} {this.props.navigation.state.params.name}
-        </Text>
-        <Image
-          style={styles.imgContainer}
-          source={pic}
-        />
-        <View style={styles.buttonsWrapper}>
-          <Button 
-          onPress={this.getNotification}
-          title="Get Notification"
-          color="#607D8B">
-          </Button>
-          <Button 
-          onPress={()=> {alert('Bye!.. see you soon'); this.props.navigation.navigate('Login')}}
-          title="Sign Out"
-          color="#880E4F">
-          </Button>
-        </View>
+        <HeaderText text={this.state.time + " " + this.props.navigation.state.params.name}/>
+        <Image style={styles.imgContainer} source={{uri: this.props.navigation.state.params.photo}} />
+        <Button onPress={this.getTimeNotification} style={styles.getNotificationButton}>
+          Get Notification
+        </Button>
+        <Button 
+        onPress={this.signOut.bind(this)}
+        style={styles.signOutButton}>
+        Sign Out
+        </Button>
       </View>
     );
   }
-}
-  
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#455A64',
-    },
-    header: {
-      flex: 1,
-      fontSize: 30,
-      marginTop: 30,
-      color: 'white'
-    },
-    imgContainer: {
-      flex: 1,
-      width: 130,
-      height:100,
-      borderRadius: 100,
-      borderColor: '#90A4AE',
-      borderWidth: 3
-    },
-    buttonsWrapper: {
-      flex: 2,
-      justifyContent: 'space-around',
-      alignItems: 'center',
-      marginTop: 100,
-      width:300,
-      flexDirection: 'row',
-    },
-  });
+};
