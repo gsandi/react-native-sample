@@ -1,20 +1,23 @@
 # react-native-sample
+    A basic app built using react-native and express.js, users can login to the app using their Google accounts, after the login is successful, there will be a welcome message with the user name, user's photo and 2 buttons, one for getting the current local time as a notification to the device from GCM triggered by the app server, and the other is for signing out from the app.
 
-Required functionality. 
---------------------------------
-1. Creation of a react-native application that can be run on android simulator. 
-2. Login page: the login should be authenticated using Google API. 
-3. Welcom page: after the login is successful, there should be a welcome message with the name like 'Good Morning Sam' or 'Good evening Sam' depending on the time. First Name of the person should be pulled from the Google login API. 
-4. Push Notification: Create an local mock server (using express.js) and below the welcome message, place a button which should send a push notification from the mock server with the current time.
-5. Design considerations: The app needs to run on multipe devices.. the elements have to scale per the device. Would be testing on Nexus6P, Pixel2, Pixel2 XL. Styling can use bootstrap or bare CSS. Elements on page should be pleasing to look. :-) 
-6. User logout: There should be option for the user to logout. On logout display a 'Bye!.. see you soon' message
+### **Technologies:** 
+    React native, Express.js, react-native-google-signin
 
-Submitting the code.
-----------------------------------
-1. Fork this repo 
-2. Keep adding files as work progress... add build instructions if any.. (think of non-developer trying to run the app in simulator). Write some help doc as markup file. 
-3. On complete of work and your testing, raise a PR against this master branch. 
+### **Installation:** 
+1. clone this repo.
+2. on terminal `cd react-native-sample`
+3. `cd server && npm install`
+4.  `npm start`
+note: if  `npm start` didn't work, run  
+`node_modules/nodemon/bin/nodemon.js -- node_modules/babel-cli/bin/babel-node.js server.js`
+5. Then run `cd .. && cd Test`
+6. `npm install`
+7. get your android emulator ready
+8. `react-native run-android`
 
-
-Happy Coding..you have 7 business days to complete and upload the code. 
-
+### **References:**
+1. react-native facebook 
+2. Stack Overflow
+3. mdn 
+4. other blogs 
