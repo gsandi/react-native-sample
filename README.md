@@ -11,10 +11,10 @@
 4.  `npm start`
 note: if  `npm start` didn't work, run  
 `node_modules/nodemon/bin/nodemon.js -- node_modules/babel-cli/bin/babel-node.js server.js`
-5. Then run `cd .. && cd Test`
+5. Open a new terminal window and make sure you're in "Test" folder
 6. `npm install`
 7. get your android emulator ready
-8. `react-native run-android`
+8. run `react-native run-android`
 
 ### **References:**
 1. react-native facebook 
