@@ -40,7 +40,6 @@ export default styles = StyleSheet.create({
     backgroundColor:'#d14836',
   }, button),
   getNotificationButton: Object.assign({
-    // marginTop: 100,
     backgroundColor: '#019be5'
   }, button),
   goToHomePageButton: {
