@@ -4,6 +4,10 @@ Upon login, the user is greeted with a Good morning/Good afternoon/Good evening 
 The background image upon login also varies depending on the time of the day.
 The logged in user can send and receive Push Notifications to get the current time from the server. 
 
+### App Demo
+
+![Alt Text](https://github.com/goyalr/react-native-sample/blob/master/DemoGIF/AppDemo.gif)
+
 ## Instructions for installation
 ### 1. IP Address Change instructions
 - Clone the repo to your computer and Open the project in your editor
