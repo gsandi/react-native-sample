@@ -8,6 +8,9 @@ The logged in user can send and receive Push Notifications to get the current ti
 
 ![Alt Text](https://github.com/goyalr/react-native-sample/blob/master/DemoGIF/AppDemo.gif)
 
+### Prerequisite
+If you do not have an Android Emulator/React-Native environment set up, follow [Setting up the Environment](https://github.com/goyalr/react-native-sample/blob/master/Setting%20up%20the%20Environment.pdf) document
+
 ## Instructions for installation
 ### 1. IP Address Change instructions
 - Clone the repo to your computer and Open the project in your editor
