@@ -17,6 +17,7 @@ import styles from './styles';
 import WelcomeComponent from '../../components/WelcomeComponent';
 import ButtonComponent from '../../components/ButtonComponent';
 import { yourLocalIpAddress } from '../../config/api';
+import { Utilities } from '../../utilities/Utilities.js'
 
 //Changing the background image as per the time of the day.
 const backgrounds = {
@@ -84,18 +85,7 @@ class HomeScreen extends Component {
 
 //function to determine how to greet the user
   handleGreeting = () => {
-    const today = new Date();
-    const curHr = today.getHours();
-    let greeting = '';
-
-    if (curHr < 12) {
-      greeting = 'Morning';
-    } else if (curHr < 18) {
-      greeting = 'Afternoon';
-    } else {
-      greeting = 'Evening';
-    }
-    return greeting;
+    return Utilities.findGreeting();
   }
 
 //Call the local mock server for sending push notiication
