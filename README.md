@@ -1,6 +1,8 @@
 ## react-native-sample
-Basic app where users can login to the app using their Google accounts.
-Send and receive Notification of the current time from the server
+LoginNPush is a basic app where users can sign in to the app using their Google accounts. 
+Upon login, the user is greeted with a Good morning/Good afternoon/Good evening message, depending on the time of the day.
+The background image upon login also varies depending on the time of the day.
+The logged in user can send and receive Push Notifications to get the current time from the server. 
 
 ## Instructions for installation
 ### 1. IP Address Change instructions
