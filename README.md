@@ -32,3 +32,6 @@ The logged in user can send and receive Push Notifications to get the current ti
 
 After instructions above you should be successfully sending and receiving push notifications
 
+#### Troubleshooting
+The emulator sometimes might behave in an uxpected manner, that may cause issues with the app functionality. In such cases, reload the app and try again.
+
