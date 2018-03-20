@@ -1,4 +1,4 @@
-package com.loginnpushapp;
+package com.apipushgoogle1;
 
 import com.facebook.react.ReactActivity;
 
