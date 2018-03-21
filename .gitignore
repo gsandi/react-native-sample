@@ -18,3 +18,6 @@ yarn-error.log*
 
 # my misc
 gapi.txt
+
+#ignore for now
+client/styles
