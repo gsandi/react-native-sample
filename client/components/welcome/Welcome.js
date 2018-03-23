@@ -4,19 +4,28 @@ import { Link } from 'react-router-native'
 import { Button } from 'react-native-elements'
 import { connect } from 'react-redux'
 import { loggedOut } from '../../redux/actions'
+import axios from 'axios'
+import registerUserToken from "../../features/pushNotifications/registerUserToken"
+import { AsyncStorage } from "react-native"
+import { PUSH_NOTI_TOKEN } from '../../utils/constants'
 
 class Welcome extends Component {
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props !== nextProps) console.log('welcome component',nextProps)
+    componentWillMount() {
+        registerUserToken()
     }
 
     render() {
-        console.log(this.props)
         const { loggedIn, user } = this.props
         let content = null
         const loggedOutContent = <View><Text>Not logged in.</Text></View>
-        content = loggedIn ? <View><Text>{`Welcome ${user.name}`}</Text></View> : loggedOutContent
+        if (loggedIn) content = (
+            <View>
+                <Text>{`Welcome ${user.name}`}</Text>
+                <TouchableHighlight style={styles.mybtn} onPress={this.pushNotification.bind(this)}><Text style={styles.btnText}>Push Notification</Text></TouchableHighlight>
+            </View>
+        )
+        else content = loggedOutContent
         return (
             <View>
                 <Text>Welcome page</Text>
@@ -31,6 +40,35 @@ class Welcome extends Component {
         console.log('clicked logout')
         this.props.dispatchLogout()
         this.props.history.push('/login')
+    }
+
+    async pushNotification() {
+        console.log('clicked push notification')
+        try {
+            const token = await AsyncStorage.getItem(PUSH_NOTI_TOKEN)
+            if (token !== null) {
+                console.log(token)
+                // axios.post('http://localhost:5000/api/push-notifications/notify-time', { token })
+                //     .then(res => {
+                //         console.log(res)
+                //     })
+                //     .catch(err => console.error(err))
+                const msg = {
+                    to: token,
+                    sound: 'default',
+                    body: `Your local date/time is ${new Date().toLocaleString()}`
+                }   
+                const options = {
+                    headers: {'accept': 'application/json', 'accept-encoding': 'gzip, deflate', 'content-type': 'application/json'}
+                }             
+                axios.post('https://exp.host/--/api/v2/push/send', msg, options)
+                    .then(res => {
+                        console.log(res)
+                    })
+                    .catch(e => console.error(e))
+            }
+        }
+        catch (e) { console.error(e) }
     }
 }
 

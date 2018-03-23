@@ -6,10 +6,6 @@ import { loggedIn } from "../../redux/actions";
 
 class Login extends Component {
 
-    componentWillReceiveProps(nextProps) {
-        if (this.props !== nextProps) console.log('login component',nextProps)
-    }
-
     render() {
         return (
             <View>
