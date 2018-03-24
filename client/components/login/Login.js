@@ -1,16 +1,26 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native'
-import { Google } from 'expo'
 import { connect } from 'react-redux'
-import { loggedIn } from "../../redux/actions";
+import { loggedIn } from "../../redux/actions"
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin'
 
 class Login extends Component {
+
+    componentDidMount() {
+        GoogleSignin.currentUserAsync()
+            .then(user => {
+                console.log('current user', user)
+                this.props.dispatchLogin(user)
+            })
+            .catch(err => console.error(err))
+    }
 
     render() {
         return (
             <View>
                 <Text>Login</Text>
-                <Button onPress={this.signIn.bind(this)} title="Google Sign In" />
+                <GoogleSigninButton style={{width:230,height:48}} size={GoogleSigninButton.Size.Standard}
+                    color={GoogleSigninButton.Color.Dark} onPress={this.signIn.bind(this)} />
                 <Button onPress={() => this.props.history.push('/welcome')} title="Go to Welcome" />
             </View>
         )
@@ -18,26 +28,23 @@ class Login extends Component {
 
     async signIn() {
         console.log('clicked signin')
-        let options = {
-            androidStandaloneAppClientId: '504976081963-fo3trfhh450pk8q78dnqem30er557l7l.apps.googleusercontent.com',
-            androidClientId: '504976081963-fo3trfhh450pk8q78dnqem30er557l7l.apps.googleusercontent.com'
-        }
-        try {
-            console.log('in try')
-            const res = await Google.logInAsync(options)
-            console.log(res)
-            if (res.type === 'success') {
-                console.log('sign in success')
-                this.props.dispatchLogin(res.user)
-                this.props.history.push('/welcome')
-            }
-            else {
-                console.log('sign in failed')
-            }
-        }
-        catch (e) {
-            console.error(e)
-        }
+        GoogleSignin.hasPlayServices({autoResolve:true})
+            .then(() => {
+                console.log('Play svcs available. Can now configure')
+                GoogleSignin.configure({
+                    webClientId: '489007047017-0liilqmhjd04dbbj4p198efsc07h7k3g.apps.googleusercontent.com'
+                })
+                .then(() => {
+                    GoogleSignin.signIn()
+                        .then(user => {
+                            console.log('signed in user',user)
+                            this.props.dispatchLogin(user)
+                        })
+                        .catch(err => console.error(err))
+                        .done()
+                })
+            })
+            .catch(err => console.error(err))
     }
 }
 

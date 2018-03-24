@@ -1,18 +1,4 @@
 {
-    "expo": {
-        "sdkVersion": "25.0.0",
-        "name": "react-native-sample",
-        "slug": "react-native-sample",
-        "platforms": [
-            "android"
-        ]
-    },
-    "android": {
-        "package": "com.fieldsii.chris",
-        "config": {
-            "googleSignIn": {
-                "apiKey": "AIzaSyDitVln37J2Ofu7ML4m_FfzfZJhJtAmOcY"
-            }
-        }
-    }
+  "name": "rns3_bw",
+  "displayName": "React Native Sample"
 }

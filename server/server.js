@@ -11,6 +11,5 @@ app.use(morgan('dev'))
 // mount routes
 app.use('/api/push-notifications/', require('./routes/push-notifications_route'))
 
-
 const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Magic happening on port ${port}`))
