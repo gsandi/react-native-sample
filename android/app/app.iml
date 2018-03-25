@@ -225,6 +225,7 @@
     <orderEntry type="library" exported="" name="org.webkit:android-jsc-r174650" level="project" />
     <orderEntry type="library" exported="" name="com.google.android.gms:play-services-ads-lite-9.2.1" level="project" />
     <orderEntry type="module" module-name="react-native-push-notification" exported="" />
+    <orderEntry type="module" module-name="react-native-vector-icons" exported="" />
     <orderEntry type="module" module-name="react-native-google-signin" exported="" />
   </component>
 </module>

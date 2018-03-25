@@ -11,7 +11,7 @@ class Login extends Component {
         return (
             <View>
                 <Text h1>Sign In</Text>
-                <GoogleSigninButton style={{width:312,height:48}} size={GoogleSigninButton.Size.Wide}
+                <GoogleSigninButton style={{width:312,height:60}} size={GoogleSigninButton.Size.Wide}
                     color={GoogleSigninButton.Color.Dark} onPress={this.signIn.bind(this)} />
             </View>
         )

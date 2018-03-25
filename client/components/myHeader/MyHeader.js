@@ -57,7 +57,7 @@ class MyHeader extends Component {
             .catch(err => console.error(err))
         this.props.dispatchLogout()
         this.setState({isVisible:true})
-        window.setTimeout(() => {this.props.history.push('/login'); this.setState({isVisible:false})}, 5000)
+        window.setTimeout(() => this.setState({isVisible:false}), 5000)
     }
 }
 
