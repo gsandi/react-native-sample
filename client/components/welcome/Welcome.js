@@ -1,39 +1,39 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, Button } from 'react-native'
+import { StyleSheet, View, TouchableHighlight, Button } from 'react-native'
 import { Link } from 'react-router-native'
 import { connect } from 'react-redux'
 import { loggedOut } from '../../redux/actions'
 import axios from 'axios'
 import { PUSH_NOTI_TOKEN } from '../../utils/constants'
 import { NativeModules } from 'react-native'
+import { Text } from "react-native-elements"
 
 class Welcome extends Component {
 
     render() {
         const { loggedIn, user } = this.props
         let content = null
-        const loggedOutContent = <View><Text>Not logged in.</Text></View>
+        const loggedOutContent = (
+            <View>
+                <Text h4>You are not signed in.</Text>
+                <Text style={{fontSize:18}}>Click the icon in the top right to sign in/out.</Text>
+                <Text style={{fontSize:18}}>Click the icon in the top left to nav here.</Text>
+            </View>
+        )
         if (loggedIn) content = (
             <View>
-                <Text>{`Welcome ${user.name}`}</Text>
+                <Text style={{fontSize:16}}>{`Good ${this.determineTime()} ${user.name}.`}</Text>
                 <TouchableHighlight style={styles.mybtn} onPress={this.pushNotification.bind(this)}><Text style={styles.btnText}>Push Notification</Text></TouchableHighlight>
+                <Text>Logout with the icon on top right.</Text>
             </View>
         )
         else content = loggedOutContent
         return (
             <View>
-                <Text>Welcome page</Text>
+                <Text h1>Welcome!</Text>
                 {content}
-                <Button title="Go to Login" onPress={() => this.props.history.push('/login')} />
-                <TouchableHighlight style={styles.mybtn} onPress={this.logout.bind(this)}><Text style={styles.btnText}>Logout</Text></TouchableHighlight>
             </View>
         )
-    }
-
-    logout() {
-        console.log('clicked logout')
-        this.props.dispatchLogout()
-        this.props.history.push('/login')
     }
 
     //10.0.2.2
@@ -49,6 +49,11 @@ class Welcome extends Component {
                 .catch(err => { console.error('ERROR_OCCURRED'); console.error(err); })
         }
         catch (e) { console.error(e) }
+    }
+
+    determineTime() {
+        const hours = new Date().getHours()
+        return hours > 5 && hours < 12 ? 'Morning' : 'Evening'
     }
 }
 
@@ -69,7 +74,7 @@ const styles = StyleSheet.create({
     mybtn: {
         marginTop: 8,
         marginBottom: 8,
-        backgroundColor: 'teal',
+        backgroundColor: '#006a4d',
         borderRadius: 20,
         padding: 10,
         alignItems: 'center'

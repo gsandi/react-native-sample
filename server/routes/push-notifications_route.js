@@ -8,14 +8,6 @@ router.post('/notify-time', async (req, res) => {
         const {regToken} = req.body
         const sender = new gcm.Sender('AAAAcdsXYWk:APA91bEZ4dr5bAARWwxuBO4ZjZbv7fxwedsNPuTmQ3s9elh3mLNvW4JjzqSDAENBLwZpvuASjwydvlrhdvmGc7dM4qEd_GXyeoeovHwk0NVU7P6M1WYr_V6i0wZJIXVBWhj2MIMA6HV0')
         const msg = new gcm.Message({
-            // notification: {
-            //     title: 'React Native Sample',
-            //     body: `Your local date/time is ${new Date().toLocaleString()}`,
-            //     icon: 'ic_launcher',
-            //     priority: 'high',
-            //     delayWhileIdle: true,
-            //     message: `Your local date/time is ${new Date().toLocaleString()}`,
-            // },
             data: {
                 title: 'React Native Sample',
                 body: `Your local date/time is ${new Date().toLocaleString()}`,

@@ -1,27 +1,18 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native'
+import { StyleShee, View, TouchableOpacity, Button } from 'react-native'
 import { connect } from 'react-redux'
 import { loggedIn } from "../../redux/actions"
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin'
+import { Text } from "react-native-elements"
 
 class Login extends Component {
-
-    componentDidMount() {
-        GoogleSignin.currentUserAsync()
-            .then(user => {
-                console.log('current user', user)
-                this.props.dispatchLogin(user)
-            })
-            .catch(err => console.error(err))
-    }
 
     render() {
         return (
             <View>
-                <Text>Login</Text>
-                <GoogleSigninButton style={{width:230,height:48}} size={GoogleSigninButton.Size.Standard}
+                <Text h1>Sign In</Text>
+                <GoogleSigninButton style={{width:312,height:48}} size={GoogleSigninButton.Size.Wide}
                     color={GoogleSigninButton.Color.Dark} onPress={this.signIn.bind(this)} />
-                <Button onPress={() => this.props.history.push('/welcome')} title="Go to Welcome" />
             </View>
         )
     }
@@ -49,10 +40,16 @@ class Login extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        loggedIn: state.loggedIn
+    }
+}
+
 const mapDispatchToProps = dispatch => {
     return {
         dispatchLogin: user => dispatch(loggedIn(user))
     }
 }
 
-export default connect(null,mapDispatchToProps)(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
