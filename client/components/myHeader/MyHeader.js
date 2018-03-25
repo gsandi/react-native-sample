@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native'
+import { StyleSheet, View, TouchableOpacity, Button } from 'react-native'
 import { connect } from 'react-redux'
 import { loggedIn, loggedOut } from "../../redux/actions"
-import { Header, Icon } from 'react-native-elements'
+import { Header, Icon, Overlay, Text } from 'react-native-elements'
 import { withRouter } from "react-router-native"
-import { GoogleSignin } from "react-native-google-signin";
+import { GoogleSignin } from "react-native-google-signin"
 
 const color = '#fff'
 
@@ -14,6 +14,7 @@ class MyHeader extends Component {
         super(props)
         this.state = {
             loggedIn: false,
+            isVisible: false,
         }
     }
 
@@ -32,6 +33,11 @@ class MyHeader extends Component {
                 leftComponent={{icon:'home', color, onPress:() => this.goToWelcome(), size:35}}
                 centerComponent={{text:'React Native Sample', style:{color, fontSize:25}}} 
                 rightComponent={this.rightComponent()} />
+                <Overlay isVisible={this.state.isVisible} fullScreen={true} overlayBackgroundColor="#ccc">
+                    <View style={{alignItems:'center'}}>
+                        <Text h3 style={{color:'black'}}>Bye! See you soon.</Text>
+                    </View>
+                </Overlay>
             </View>                
         )
     }
@@ -50,7 +56,8 @@ class MyHeader extends Component {
             .then(() => console.log('user signed out'))
             .catch(err => console.error(err))
         this.props.dispatchLogout()
-        this.props.history.push('/login')
+        this.setState({isVisible:true})
+        window.setTimeout(() => {this.props.history.push('/login'); this.setState({isVisible:false})}, 5000)
     }
 }
 
