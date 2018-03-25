@@ -1,7 +1,9 @@
 {
   "project_info": {
     "project_number": "489007047017",
-    "project_id": "cbre-project"
+    "firebase_url": "https://cbre-project.firebaseio.com",
+    "project_id": "cbre-project",
+    "storage_bucket": "cbre-project.appspot.com"
   },
   "client": [
     {
@@ -13,7 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "489007047017-0liilqmhjd04dbbj4p198efsc07h7k3g.apps.googleusercontent.com",
+          "client_id": "489007047017-d6u478rrrltis8pqlmm5n0n0avb63cl2.apps.googleusercontent.com",
           "client_type": 3
         },
         {
@@ -23,6 +25,10 @@
             "package_name": "com.fieldsii.chris",
             "certificate_hash": "33fcf31de9b6c4383657dd27a47c9f6f4c704603"
           }
+        },
+        {
+          "client_id": "489007047017-0liilqmhjd04dbbj4p198efsc07h7k3g.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
@@ -35,11 +41,16 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489007047017-d6u478rrrltis8pqlmm5n0n0avb63cl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     },
@@ -51,6 +62,10 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "489007047017-d6u478rrrltis8pqlmm5n0n0avb63cl2.apps.googleusercontent.com",
+          "client_type": 3
+        },
         {
           "client_id": "489007047017-0liilqmhjd04dbbj4p198efsc07h7k3g.apps.googleusercontent.com",
           "client_type": 3
@@ -74,11 +89,16 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489007047017-d6u478rrrltis8pqlmm5n0n0avb63cl2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
-          "status": 1
+          "status": 2
         }
       }
     }

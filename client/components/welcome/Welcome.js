@@ -4,8 +4,8 @@ import { Link } from 'react-router-native'
 import { connect } from 'react-redux'
 import { loggedOut } from '../../redux/actions'
 import axios from 'axios'
-import { AsyncStorage } from "react-native"
 import { PUSH_NOTI_TOKEN } from '../../utils/constants'
+import { NativeModules } from 'react-native'
 
 class Welcome extends Component {
 
@@ -36,31 +36,17 @@ class Welcome extends Component {
         this.props.history.push('/login')
     }
 
+    //10.0.2.2
     async pushNotification() {
         console.log('clicked push notification')
         try {
-            const token = await AsyncStorage.getItem(PUSH_NOTI_TOKEN)
-            if (token !== null) {
-                console.log(token)
-                axios.post('http://192.168.42.230:5000/api/push-notifications/notify-time', { token })
-                    .then(res => {
-                        console.log(res)
-                    })
-                    .catch(err => console.error(err))
-                // const msg = {
-                //     to: token,
-                //     sound: 'default',
-                //     body: `Your local date/time is ${new Date().toLocaleString()}`
-                // }   
-                // const options = {
-                //     headers: {'accept': 'application/json', 'accept-encoding': 'gzip, deflate', 'content-type': 'application/json'}
-                // }             
-                // axios.post('https://exp.host/--/api/v2/push/send', msg, options)
-                //     .then(res => {
-                //         console.log(res)
-                //     })
-                //     .catch(e => console.error(e))
-            }
+            let regToken = await NativeModules.PushNotiToken.genToken()
+            console.log(regToken)
+            axios.post('http://10.1.1.13:5000/api/push-notifications/notify-time', {regToken})
+                .then(res => {
+                    console.log(res)
+                })
+                .catch(err => { console.error('ERROR_OCCURRED'); console.error(err); })
         }
         catch (e) { console.error(e) }
     }

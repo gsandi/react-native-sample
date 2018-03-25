@@ -39,6 +39,7 @@ class Login extends Component {
                         .then(user => {
                             console.log('signed in user',user)
                             this.props.dispatchLogin(user)
+                            this.props.history.push('/welcome')
                         })
                         .catch(err => console.error(err))
                         .done()
