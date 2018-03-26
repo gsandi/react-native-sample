@@ -19,9 +19,11 @@ class Welcome extends Component {
     }
 
     componentWillMount() {
-        if (!this.props.loggedIn) {
-            this.animateOpacity()
-        }
+        if (!this.props.loggedIn) this.animateOpacity()
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.loggedIn && !nextProps.loggedIn) window.setTimeout(() => this.animateOpacity(), 5000)
     }
 
     render() {
