@@ -61,7 +61,7 @@ class Welcome extends Component {
         try {
             let regToken = await NativeModules.PushNotiToken.genToken()
             console.log(regToken)
-            axios.post('http://10.1.1.13:5000/api/push-notifications/notify-time', {regToken})
+            axios.post('http://10.0.2.2:5000/api/push-notifications/notify-time', {regToken})
                 .then(res => {
                     console.log(res)
                 })
