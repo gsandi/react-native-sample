@@ -1,4 +1,4 @@
-#Fri Apr 20 22:00:17 CDT 2018
-base.0=/Users/zachery/Documents/react-native-sample/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Fri Apr 20 22:41:53 CDT 2018
+base.0=/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/Users/zachery/Documents/react-native-sample/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
