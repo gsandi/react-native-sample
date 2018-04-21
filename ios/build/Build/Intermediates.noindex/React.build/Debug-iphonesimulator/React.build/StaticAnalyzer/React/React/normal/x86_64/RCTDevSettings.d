@@ -1,0 +1,23 @@
+dependencies: \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Modules/RCTDevSettings.mm \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Modules/RCTDevSettings.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/zachery/Desktop/react-native-sample/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JavaScriptCore.h \
+  /Users/zachery/Desktop/react-native-sample/ios/build/Build/Products/Debug-iphonesimulator/include/jschelpers/JSCWrapper.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Modules/RCTJSCSamplingProfiler.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/DevSupport/RCTInspectorDevServerHelper.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Inspector/RCTInspectorPackagerConnection.h

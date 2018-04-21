@@ -1,0 +1,13 @@
+dependencies: \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/third-party/glog-0.3.4/src/logging.cc \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/utilities.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/base/mutex.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/third-party/glog-0.3.4/src/config.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/config.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/glog/logging.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/glog/log_severity.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/glog/vlog_is_on.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/base/commandlineflags.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/glog/raw_logging.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/base/googleinit.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../third-party/glog-0.3.4/src/stacktrace.h

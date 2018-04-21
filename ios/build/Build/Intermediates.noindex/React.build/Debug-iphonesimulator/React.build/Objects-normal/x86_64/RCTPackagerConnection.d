@@ -1,0 +1,25 @@
+dependencies: \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/DevSupport/RCTPackagerConnection.mm \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/DevSupport/RCTPackagerConnection.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTBundleURLProvider.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/zachery/Desktop/react-native-sample/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/zachery/Desktop/react-native-sample/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/zachery/Desktop/react-native-sample/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/DevSupport/RCTPackagerClient.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../Libraries/WebSocket/RCTReconnectingWebSocket.h \
+  /Users/zachery/Desktop/react-native-sample/node_modules/react-native/React/../Libraries/WebSocket/RCTSRWebSocket.h
