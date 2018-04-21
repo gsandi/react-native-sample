@@ -4,10 +4,10 @@ import {
 } from '../actions/actionTypes';
 
 const initialState = {
-    isAuth: false,
-}
+    isAuth: false
+};
 
-const reducer = (state=initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch(action.type){
         case LOG_IN:
             return {

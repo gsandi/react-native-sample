@@ -1,22 +1,17 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Navigation } from 'react-native-navigation';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-      </View>
-    );
+import LoginScreen from './src/screens/LoginScreen/LoginScreen';
+import HomeScreen from './src/screens/HomeScreen/HomeScreen';
+import LogoutScreen from './src/screens/LogoutScreen/LogoutScreen'
+
+Navigation.registerComponent('react-native-sample.LoginScreen', () => LoginScreen);
+Navigation.registerComponent('react-native-sample.LogoutScreen', () => LogoutScreen);
+Navigation.registerComponent('react-native-sample.HomeScreen', () => HomeScreen);
+
+
+Navigation.startSingleScreenApp({
+  screen: {
+    screen: 'react-native-sample.LoginScreen',
+    title: 'Welcome, Please Login'
   }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
 });
