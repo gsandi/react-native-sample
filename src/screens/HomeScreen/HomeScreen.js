@@ -1,14 +1,31 @@
 import React, { Component } from 'react'
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, Image } from 'react-native';
+import { connect } from 'react-redux';
 
 class HomeScreen extends Component {
+    constructor(props){
+        super(props);
+    }
     render(){
         return (
             <View>
-                <Text>HomeScreen</Text>
+                <Image
+                    style={{width: 50, height: 50}}
+                    source={{uri: this.props.image}}
+                />
+                <Text>{this.props.name}</Text>
             </View>
         );
     }
 }
 
-export default HomeScreen
+const mapStateToProps = state => {
+    return {
+        name: state.auth.user.name,
+        image: state.auth.user.photo
+    }
+}
+
+export default connect(mapStateToProps)(HomeScreen)
+
+// export default HomeScreen

@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { View, Text, Button } from 'react-native';
 import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
+import { connect } from 'react-redux'
+import { bindActionCreators } from "redux";
 
+import { userLogin } from '../../store/actions/AuthActions';
 import startMainTabs from '../MainTabs/startMainTabs';
 
 const googleConfig = {
@@ -18,11 +21,12 @@ class LoginScreen extends Component {
         
         GoogleSignin.configure(googleConfig)
       }
-    
 
     loginHandler = () => {
         GoogleSignin.signIn().then( user => {
             this.setState({user: user});
+            this.props.userLogin(user);
+            console.log(user);
             startMainTabs();
 
           }).catch( err => {
@@ -41,4 +45,8 @@ class LoginScreen extends Component {
     }
 }
 
-export default LoginScreen
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ userLogin }, dispatch);
+}
+  
+  export default connect(null, mapDispatchToProps)(LoginScreen);
