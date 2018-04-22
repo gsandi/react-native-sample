@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { View, Text, Button } from 'react-native';
-import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
+import { View, Text, Button, StyleSheet} from 'react-native';
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import { connect } from 'react-redux'
 import { bindActionCreators } from "redux";
 
 import { userLogin } from '../../store/actions/AuthActions';
-import startMainTabs from '../MainTabs/startMainTabs';
 
 const googleConfig = {
     scopes: ["https://www.googleapis.com/auth/drive.readonly"], 
@@ -13,7 +12,11 @@ const googleConfig = {
 }
 
 class LoginScreen extends Component {
-
+    static navigatorStyle = {
+        drawUnderNavBar: true,
+        navBarComponentAlignment: 'center', // center/fill
+        navBarTitleTextCentered: true, // default: false. centers the title.
+    };
     componentWillMount() {
         GoogleSignin.hasPlayServices({ autoResolve: true }).catch( err => {
           console.log("Play services error", err.code, err.message);
@@ -26,7 +29,17 @@ class LoginScreen extends Component {
         GoogleSignin.signIn().then( user => {
             this.setState({user: user});
             this.props.userLogin(user);
-            startMainTabs();
+            this.props.navigator.push({
+                screen: 'react-native-sample.HomeScreen',
+                title: 'Home',
+                animated: true,
+                animationType: 'fade',
+                navigatorButtons: {
+                  leftButtons: [
+                    {}
+                  ]
+                }
+              });
 
           }).catch( err => {
             console.log('WRONG SIGNIN', err);
@@ -35,13 +48,31 @@ class LoginScreen extends Component {
 
     render(){
         return (
-            <View>
-                <GoogleSigninButton style={{width:312,height:60}} size={GoogleSigninButton.Size.Wide}
-                    color={GoogleSigninButton.Color.Dark} onPress={this.loginHandler} />
+            <View style={styles.container}>
+                <Text style={styles.message}>Welcome,</Text>
+                <Text style={styles.message}>Please Login</Text>
+                <GoogleSigninButton style={{width:200,height:60}} size={GoogleSigninButton.Size.Wide}
+                    color={GoogleSigninButton.Color.light} onPress={this.loginHandler} />
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#5C6BC0'
+    },
+    message:{
+        marginBottom: 10,
+        color: 'white',
+        fontWeight: 'bold',
+        fontFamily: 'Arial',
+        fontSize: 20,
+    },
+})
 
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({ userLogin }, dispatch);

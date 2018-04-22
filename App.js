@@ -16,6 +16,13 @@ Navigation.registerComponent('react-native-sample.HomeScreen', () => HomeScreen,
 Navigation.startSingleScreenApp({
   screen: {
     screen: 'react-native-sample.LoginScreen',
-    title: 'Welcome, Please Login'
+    title: 'React Native Sample',
+    animated: true,
+    animationType: 'fade',
+    navigatorButtons: {
+      leftButtons: [
+        {}
+      ]
+    }
   }
 });
