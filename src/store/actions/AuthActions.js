@@ -13,6 +13,6 @@ export const userLogin = (user) => {
 export const userLogout = () => {
     return {
         type: LOG_OUT,
-        payload: false
+        payload: []
     }
 }

@@ -26,7 +26,6 @@ class LoginScreen extends Component {
         GoogleSignin.signIn().then( user => {
             this.setState({user: user});
             this.props.userLogin(user);
-            console.log(user);
             startMainTabs();
 
           }).catch( err => {
@@ -37,7 +36,6 @@ class LoginScreen extends Component {
     render(){
         return (
             <View>
-                <Text>LoginScreen</Text>
                 <GoogleSigninButton style={{width:312,height:60}} size={GoogleSigninButton.Size.Wide}
                     color={GoogleSigninButton.Color.Dark} onPress={this.loginHandler} />
             </View>

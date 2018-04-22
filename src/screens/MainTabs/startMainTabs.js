@@ -4,7 +4,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const startTabs = () => {
     Promise.all([
         Icon.getImageSource("home", 30),
-        Icon.getImageSource("sign-out", 30)
     ]).then(sources => {
         Navigation.startTabBasedApp({
             tabs: [
@@ -14,12 +13,6 @@ const startTabs = () => {
                     title: 'Home',
                     icon: sources[0]
                 },
-                {
-                    screen: 'react-native-sample.LogoutScreen',
-                    label: 'Logout',
-                    title: 'Logout',
-                    icon: sources[1]
-                }
             ]
         });
     });
