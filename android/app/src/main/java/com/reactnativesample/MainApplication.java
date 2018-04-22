@@ -3,12 +3,14 @@ package com.reactnativesample;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
+import co.apptailor.googlesignin.RNGoogleSigninPackage;  // <--- import
 
 import java.util.Arrays;
 import java.util.List;
@@ -25,8 +27,10 @@ public class MainApplication extends NavigationApplication {
          // Add additional packages you require here
          // No need to add RnnPackage and MainReactPackage
          return Arrays.<ReactPackage>asList(
-             // eg. new VectorIconsPackage()
-             new VectorIconsPackage()
+            // eg. new VectorIconsPackage()
+            new VectorIconsPackage(),
+            new RNGoogleSigninPackage() // <-- add this
+
          );
     }
 
@@ -45,6 +49,7 @@ public class MainApplication extends NavigationApplication {
   //   protected List<ReactPackage> getPackages() {
   //     return Arrays.<ReactPackage>asList(
   //         new MainReactPackage(),
+            //new RNGoogleSigninPackage(),
   //         new VectorIconsPackage()
   //     );
   //   }
