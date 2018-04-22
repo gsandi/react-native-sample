@@ -3,10 +3,10 @@ import {
     LOG_OUT
 } from './actionTypes';
 
-export const userLogin = () => {
+export const userLogin = (user) => {
     return {
         type: LOG_IN,
-        payload: true
+        payload: user
     }
 }
 

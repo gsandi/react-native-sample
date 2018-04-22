@@ -4,7 +4,8 @@ import {
 } from '../actions/actionTypes';
 
 const initialState = {
-    isAuth: false
+    isAuth: false,
+    user: []
 };
 
 const reducer = (state = initialState, action) => {
