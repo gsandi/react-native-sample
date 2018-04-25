@@ -10,7 +10,8 @@ import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.reactnativenavigation.NavigationApplication;
-import co.apptailor.googlesignin.RNGoogleSigninPackage;  // <--- import
+import co.apptailor.googlesignin.RNGoogleSigninPackage;
+import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -29,8 +30,8 @@ public class MainApplication extends NavigationApplication {
          return Arrays.<ReactPackage>asList(
             // eg. new VectorIconsPackage()
             new VectorIconsPackage(),
-            new RNGoogleSigninPackage() // <-- add this
-
+            new RNGoogleSigninPackage(),
+            new ReactNativePushNotificationPackage()
          );
     }
 

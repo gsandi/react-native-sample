@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-26:12
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-58:12
 	package
 		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:2:5-36
 		INJECTED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml
@@ -26,10 +26,85 @@ MERGED from [com.facebook.react:react-native:0.54.4] /Users/zachery/Desktop/reac
 MERGED from [com.facebook.react:react-native:0.54.4] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/AndroidManifest.xml:11:5-78
 MERGED from [com.facebook.react:react-native:0.54.4] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/AndroidManifest.xml:11:5-78
 MERGED from [com.facebook.react:react-native:0.54.4] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/AndroidManifest.xml:11:5-78
+MERGED from [com.facebook.react:react-native:0.54.4] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/AndroidManifest.xml:11:5-78
 	android:name
 		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:6:5-68
+MERGED from [com.google.firebase:firebase-analytics:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.2.1/AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:22:5-68
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:6:22-65
+permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:7:5-9:47
+	android:protectionLevel
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:9:9-44
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:8:9-63
+		INJECTED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml
+uses-permission#${applicationId}.permission.C2D_MESSAGE
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:10:22-76
+		INJECTED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:11:5-66
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:11:22-63
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:12:22-78
 application
-ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:7:5-24:19
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:14:5-56:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.facebook.react:react-native:0.54.4] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/AndroidManifest.xml:13:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:3:3-17
+MERGED from [org.webkit:android-jsc:r174650] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/org.webkit/android-jsc/r174650/AndroidManifest.xml:2:3-17
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
@@ -611,44 +686,152 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/r
 MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:29:5-20
 	android:label
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:9:7-39
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:16:7-39
 	android:allowBackup
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:11:7-34
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:18:7-34
 	android:icon
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:10:7-41
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:17:7-41
 	android:theme
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:12:7-38
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:19:7-38
 	android:name
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:8:7-38
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:15:7-38
 activity#com.reactnativesample.MainActivity
-ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:13:7-22:18
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:20:7-29:18
 	android:label
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:22:9-41
 	android:windowSoftInputMode
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:17:9-51
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:24:9-51
 	android:configChanges
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:16:9-79
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:23:9-79
 	android:name
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:14:9-37
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:21:9-37
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:18:9-21:25
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:25:9-28:25
 action#android.intent.action.MAIN
-ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:19:13-65
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:26:13-65
 	android:name
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:19:21-62
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:26:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:20:13-73
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:27:13-73
 	android:name
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:20:23-70
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:27:23-70
 activity#com.facebook.react.devsupport.DevSettingsActivity
-ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:23:7-84
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:30:7-84
 MERGED from [reactnativesample:react-native-navigation:unspecified] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-navigation/unspecified/AndroidManifest.xml:15:9-17:40
 	android:exported
 		ADDED from [reactnativesample:react-native-navigation:unspecified] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-navigation/unspecified/AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:23:17-81
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:30:17-81
+receiver#com.google.android.gms.gcm.GcmReceiver
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:31:9-39:20
+	android:exported
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:33:13-36
+	android:permission
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:34:13-73
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:32:13-66
+intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:35:13-38:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:36:17-81
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:36:25-78
+category#${applicationId}
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:37:17-61
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:37:27-58
+		INJECTED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml
+receiver#com.dieam.reactnativepushnotification.modules.RNPushNotificationPublisher
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:41:9-110
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:41:19-107
+receiver#com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:42:9-46:20
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:42:19-115
+intent-filter#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:43:13-45:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:44:17-79
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:44:25-76
+service#com.dieam.reactnativepushnotification.modules.RNPushNotificationRegistrationService
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:47:9-118
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:47:18-116
+service#com.dieam.reactnativepushnotification.modules.RNPushNotificationListenerService
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:48:9-54:19
+	android:exported
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:50:13-37
+	android:name
+		ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:49:13-107
+intent-filter#com.google.android.c2dm.intent.RECEIVE
+ADDED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:51:13-53:29
 uses-sdk
 INJECTED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [reactnativesample:react-native-push-notification:unspecified] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-push-notification/unspecified/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.facebook.react:react-native:0.54.4] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.54.4/AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
+MERGED from [com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.0.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/AndroidManifest.xml:14:5-16:41
+MERGED from [com.facebook.fresco:fresco:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:1.3.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.1.0] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/AndroidManifest.xml:2:3-70
+MERGED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:21:5-23:54
 MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:21:5-23:58
@@ -1365,6 +1548,50 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/r
 MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
 MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.1/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:design:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/design/25.3.1/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-v4:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.1/AndroidManifest.xml:25:5-27:34
 MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.1/AndroidManifest.xml:25:5-27:34
@@ -1840,11 +2067,55 @@ MERGED from [com.android.support:support-compat:25.3.1] /Users/zachery/Desktop/r
 	android:name
 		ADDED from [com.android.support:appcompat-v7:25.3.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.1/AndroidManifest.xml:26:9-47
 android:uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-IMPLIED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-58:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 android:uses-permission#android.permission.READ_PHONE_STATE
-IMPLIED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
+IMPLIED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-58:12 reason: org.webkit.android_jsc has a targetSdkVersion < 4
 android:uses-permission#android.permission.READ_EXTERNAL_STORAGE
-IMPLIED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-26:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+IMPLIED from /Users/zachery/Desktop/react-native-sample/android/app/src/main/AndroidManifest.xml:1:1-58:12 reason: org.webkit.android_jsc requested WRITE_EXTERNAL_STORAGE
+uses-permission#com.sec.android.provider.badge.permission.READ
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:19:5-86
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:19:22-83
+uses-permission#com.sec.android.provider.badge.permission.WRITE
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:20:5-87
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:20:22-84
+uses-permission#com.htc.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:23:5-81
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:23:22-78
+uses-permission#com.htc.launcher.permission.UPDATE_SHORTCUT
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:24:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:24:22-80
+uses-permission#com.sonyericsson.home.permission.BROADCAST_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:27:5-88
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:27:22-85
+uses-permission#com.sonymobile.home.permission.PROVIDER_INSERT_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:28:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:28:22-89
+uses-permission#com.anddoes.launcher.permission.UPDATE_COUNT
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:31:5-84
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:31:22-81
+uses-permission#com.majeur.launcher.permission.UPDATE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:34:5-83
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:34:22-80
+uses-permission#com.huawei.android.launcher.permission.CHANGE_BADGE
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:37:5-91
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:37:22-88
+uses-permission#com.huawei.android.launcher.permission.READ_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:38:5-92
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:38:22-89
+uses-permission#com.huawei.android.launcher.permission.WRITE_SETTINGS
+ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:39:5-93
+	android:name
+		ADDED from [me.leolin:ShortcutBadger:1.1.8] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/me.leolin/ShortcutBadger/1.1.8/AndroidManifest.xml:39:22-90
 activity#com.reactnativenavigation.controllers.NavigationActivity
 ADDED from [reactnativesample:react-native-navigation:unspecified] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-navigation/unspecified/AndroidManifest.xml:12:9-14:86
 	android:configChanges
@@ -1904,12 +2175,6 @@ MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] /Users/zachery/D
 MERGED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:20:5-79
 	android:name
 		ADDED from [com.google.firebase:firebase-analytics:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:22:22-76
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.firebase:firebase-analytics:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.2.1/AndroidManifest.xml:24:5-67
-MERGED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:22:5-68
-	android:name
-		ADDED from [com.google.firebase:firebase-analytics:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:24:22-65
 receiver#com.google.android.gms.measurement.AppMeasurementReceiver
 ADDED from [com.google.firebase:firebase-analytics:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/AndroidManifest.xml:28:7-34:18
 MERGED from [com.google.firebase:firebase-analytics-impl:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.2.1/AndroidManifest.xml:28:7-34:18
@@ -1948,16 +2213,10 @@ uses-permission#com.google.android.c2dm.permission.RECEIVE
 ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:23:5-82
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:23:22-79
-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:25:5-26:47
-	android:protectionLevel
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:26:9-44
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:25:17-71
-uses-permission#${applicationId}.permission.C2D_MESSAGE
-ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:28:5-79
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:28:22-76
+permission#com.reactnativesample.permission.C2D_MESSAGE
+MERGED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:25:5-26:47
+uses-permission#com.reactnativesample.permission.C2D_MESSAGE
+MERGED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:28:5-79
 receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
 ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:32:9-41:20
 	android:exported
@@ -1968,18 +2227,10 @@ ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react
 		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:33:13-78
 intent-filter#${applicationId}+com.google.android.c2dm.intent.RECEIVE+com.google.android.c2dm.intent.REGISTRATION
 ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:36:13-40:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:37:17-81
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:37:25-78
 action#com.google.android.c2dm.intent.REGISTRATION
 ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:38:17-86
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:38:25-83
-category#${applicationId}
-ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:39:17-61
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:39:27-58
 receiver#com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
 ADDED from [com.google.firebase:firebase-iid:9.2.1] /Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.2.1/AndroidManifest.xml:45:9-47:40
 	android:exported
