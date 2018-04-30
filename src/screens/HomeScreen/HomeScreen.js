@@ -2,12 +2,21 @@ import React, { Component } from 'react'
 import { View, Text, Button, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
-import {GoogleSignin} from 'react-native-google-signin';
+import { GoogleSignin } from 'react-native-google-signin';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-
+import { notification } from '../../components/notifications.js';
+// import { PushNotification } from 'react-native-push-notification';
 import { userLogout } from '../../store/actions/AuthActions';
 
+var PushNotification = require('react-native-push-notification');
+
+
 class HomeScreen extends Component {
+
+    componentWillMount() {
+        notification.init()
+    }    
+
     static navigatorStyle = {
         drawUnderNavBar: true,
         navBarComponentAlignment: 'center', // center/fill
@@ -17,7 +26,6 @@ class HomeScreen extends Component {
         super(props);
         this.handleGreeting = this.handleGreeting.bind(this);
         this.signOut = this.signOut.bind(this);
-        this.pushNotify = this.pushNotify.bind(this);
     }
 
     handleGreeting(){
@@ -25,13 +33,13 @@ class HomeScreen extends Component {
         const currentHour = now.getHours();
         let message = '';
     
-        if (currentHour > 12) {
+        if (currentHour >= 11) {
           message = 'Morning';
         } else {
           message = 'Evening';
         }
         return message;
-      }
+    }
 
     signOut() {
         GoogleSignin.signOut().then(() => {
@@ -52,9 +60,9 @@ class HomeScreen extends Component {
             console.log('Error:', error)
        });
     }
-
-    pushNotify() {
-
+    getNotification(){
+        notification.postNotificationToken();
+        notification.getTime();
     }
 
     render(){
@@ -66,7 +74,7 @@ class HomeScreen extends Component {
                 />
                 <Text style={styles.message}>Good {this.handleGreeting()}, {this.props.name}</Text>
                 
-                <TouchableOpacity style={styles.button} onPress={this.pushNotify}>
+                <TouchableOpacity style={styles.button} onPress={this.getNotification.bind(this)}>
                     <Text style={styles.buttonText}>Send Notification</Text>
                 </TouchableOpacity>
                 
