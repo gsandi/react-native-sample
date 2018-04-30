@@ -33,7 +33,7 @@ class HomeScreen extends Component {
         const currentHour = now.getHours();
         let message = '';
     
-        if (currentHour >= 11) {
+        if (currentHour < 12) {
           message = 'Morning';
         } else {
           message = 'Evening';

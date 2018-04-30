@@ -19,16 +19,13 @@ app.use(bodyParser.json());
 app.get('/getnotification', (req , res, next) => {
     message.addData('time', moment().format('LT'));
     message.delay_while_idle = 1;
-    console.log(message);
-    sender.send(message, registrationIds, 4, function (error, result) {
-      console.log(error);
+    sender.send(message, registrationIds, 4, function (err, result) {
       console.log(result);
     });
     next()
 })
   
 app.post('/', (req , res, next) => {
-    console.log(req.body.token)
     if(!req.body.token) {
       return res.status(400)
     }

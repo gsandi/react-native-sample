@@ -35,12 +35,12 @@ export const notification = {
         console.log('GET CURRENT TIME');
         fetch('http://10.0.2.2:5000/getnotification')
         .then(function(response){
-            console.log(response);
             PushNotification.localNotification({
                 title: 'React-Native-Sample',
                 message: response.headers.map.date[0],
             });
-            return response.headers.map.date;
+
+            return response;
         })
         .catch(function(error){
             console.log(error.message);
