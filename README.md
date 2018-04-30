@@ -1,5 +1,6 @@
-#React Native Sample
-##Summary
+##React Native Sample
+
+###Summary
 This is a basic React Native application that allows the user to login with google authentication, send a push notification with the current time, and logout.
 The layout of the application is as follows:
 
@@ -18,13 +19,13 @@ The layout of the application is as follows:
 
 ![Alt Text](https://github.com/zacharylangley/react-native-sample/src/assets/screencap1.gif)
 
-##Prerequisites
+###Prerequisites
 
 1. [Install Android Studio](https://developer.android.com/studio/)
 2. [Install SDK and Emulator Prequisites](https://facebook.github.io/react-native/docs/getting-started.html)
 3. [Install React Native](https://facebook.github.io/react-native/docs/getting-started.html)
 
-##Installation
+###Installation
 1. Open a Terminal or Terminal Emulator
 2. `git clone https://github.com/ZacharyLangley/react-native-sample.git`
 3. Navigate to repository `cd react-native-sample/`
