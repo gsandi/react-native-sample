@@ -19,6 +19,8 @@ The layout of the application is as follows:
 3. Logout Screen
   * Upon logging out, a goodbye message is displayed on the screen.
   * A button is on the screen that will allow the user to be redirected to the Login screen to log back into the application.
+  
+## Gif Recorded with Android Studio Native Recorder
 
 ![Alt Text](https://github.com/zacharylangley/react-native-sample/blob/master/src/assets/screencap1.gif)
 
