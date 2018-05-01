@@ -5,6 +5,7 @@ This is a basic React Native / Redux Application that allows the user to login w
 * Scrumy was used to manage tasks while creating this application
 * Scrum Kanban Board: [Here](https://scrumy.com/foresees94ulcerate) 
 * Hard Link: [https://scrumy.com/foresees94ulcerate](https://scrumy.com/foresees94ulcerate)
+
 The layout of the application is as follows:
 
 1. Login Screen
