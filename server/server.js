@@ -15,21 +15,32 @@ moment.locale();
 // App Configuration
 const app = express();
 app.use(bodyParser.json());
-
+/**
+ * @param { '/getnotification', (req, res, next) }
+ * @name get
+ * @description 
+ *     serve notification when route is fetched
+ */
 app.get('/getnotification', (req , res, next) => {
     message.addData('time', moment().format('LT'));
     message.delay_while_idle = 1;
     sender.send(message, registrationIds, 4, function (err, result) {
+      console.log(error);
       console.log(result);
     });
     next()
 })
-  
+/**
+ * @param { '/', (req, res, next) }
+ * @name post
+ * @description 
+ *     Add Token to registeredID's for future use
+ */
 app.post('/', (req , res, next) => {
     if(!req.body.token) {
       return res.status(400)
     }
-      registrationIds = [req.body.token];
+    registrationIds = [req.body.token];
     next()
 })
 

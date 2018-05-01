@@ -11,12 +11,7 @@ import { userLogout } from '../../store/actions/AuthActions';
 var PushNotification = require('react-native-push-notification');
 
 
-class HomeScreen extends Component {
-
-    componentWillMount() {
-        notification.init()
-    }    
-
+class HomeScreen extends Component {  
     static navigatorStyle = {
         drawUnderNavBar: true,
         navBarComponentAlignment: 'center', // center/fill
@@ -27,12 +22,25 @@ class HomeScreen extends Component {
         this.handleGreeting = this.handleGreeting.bind(this);
         this.signOut = this.signOut.bind(this);
     }
-
+    /**
+     * @param { }
+     * @name componenetWillMount
+     * @description 
+     *      Before the component is rendered, launch initialization of push notifications
+     */
+    componentWillMount() {
+        notification.init()
+    }  
+    /**
+     * @param { }
+     * @name handleGreeting
+     * @description 
+     *      Based on the current time, generate a greeting for the user
+     */
     handleGreeting(){
         const now = new Date();
         const currentHour = now.getHours();
         let message = '';
-    
         if (currentHour < 12) {
           message = 'Morning';
         } else {
@@ -40,7 +48,14 @@ class HomeScreen extends Component {
         }
         return message;
     }
-
+    /**
+     * @param { }
+     * @name signOut
+     * @description 
+     *      Handles the user when they decide to log out.
+     *      Removes user information from the application
+     *      Redirects them to the logout screen.
+     */
     signOut() {
         GoogleSignin.signOut().then(() => {
             // Navigate
@@ -60,11 +75,24 @@ class HomeScreen extends Component {
             console.log('Error:', error)
        });
     }
+
+    /**
+     * @param { }
+     * @name getNotification
+     * @description 
+     *      Call notification functions from notifications utility
+     */
     getNotification(){
         notification.postNotificationToken();
         notification.getTime();
     }
 
+    /**
+     * @param { }
+     * @name render
+     * @description 
+     *      Render the Interface, must be wrapped in a single View or element.
+     */
     render(){
         return (
             <View style={styles.container}>
@@ -131,18 +159,35 @@ const styles = StyleSheet.create({
     }
 })
 
+/**
+ * @name mapStateToProps
+ * @description 
+ *      Gives access to specific parts of the global state within the store.
+ *      Can use global state through props.
+ */
 const mapStateToProps = state => {
     return {
         name: state.auth.user.name,
         image: state.auth.user.photo
     }
 }
-
+/**
+ * @name mapDispatchToProps
+ * @description 
+ *     Interface that passes relevant action creators to the component 
+ *     This lets you send changes to the global state from any component within the application,
+ *     rather than use redundant functions to send state data up and down the application tree.
+ */
 function mapDispatchToProps(dispatch) {
     return bindActionCreators({ userLogout }, dispatch);
 }
   
-
+/**
+ * @name connect
+ * @description 
+ *     connect mapDispatchToProps, mapStateToProps, and LoginScreen to the global store.
+ *     Only by dispatching actions can you change the state
+ */
 export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)
 
 // export default HomeScreen

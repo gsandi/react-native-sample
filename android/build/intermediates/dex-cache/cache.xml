@@ -142,18 +142,18 @@
         <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.3.1_50cdc9ae7bd44f4ff74e4622200506178c2e3f0e.jar" />
     </item>
     <item
+        jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-navigation/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="25.0.1"
+        sha1="a352a063b6f794e717c0eade3157e0de6fbcfdc2">
+        <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/reactnativesample-react-native-navigation-unspecified_0c348c21693d446d5ee380419ebbf3dc77e556c0.jar" />
+    </item>
+    <item
         jar="/Users/zachery/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
         jumboMode="false"
         revision="25.0.1"
         sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
         <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_54dbd41bcc0f7a57a922d1f955ab600f38a7fb0d.jar" />
-    </item>
-    <item
-        jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-navigation/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="25.0.1"
-        sha1="fe2889a47c5f1f767c645e261ffc9c6686131888">
-        <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/reactnativesample-react-native-navigation-unspecified_0c348c21693d446d5ee380419ebbf3dc77e556c0.jar" />
     </item>
     <item
         jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.2.1/jars/classes.jar"
@@ -166,7 +166,7 @@
         jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-vector-icons/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="25.0.1"
-        sha1="cbf376230bf99311fe1218d8e8703d30217c3603">
+        sha1="02402806b17afcb2ed07fce3eeb37d7ee5d80537">
         <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/reactnativesample-react-native-vector-icons-unspecified_6411d8d91e59cb8d0a59b1b87aea0c22fc7cc393.jar" />
     </item>
     <item
@@ -285,7 +285,7 @@
         jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-google-signin/unspecified/jars/classes.jar"
         jumboMode="false"
         revision="25.0.1"
-        sha1="755972a3d8fb810cde3b4242cbddaf96b9bf28f8">
+        sha1="2f502a5ca3e15fffed72868697b1a135a12ee213">
         <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/reactnativesample-react-native-google-signin-unspecified_e1541a3158864e65b8088d7cb77ffe4000c47d3b.jar" />
     </item>
     <item
@@ -303,18 +303,18 @@
         <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-iid-9.2.1_f347b0818e31eb5bf3941532a364956cff9d7ad3.jar" />
     </item>
     <item
+        jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-push-notification/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="25.0.1"
+        sha1="0bdbc1034679615ed740321b47166057cb3b5330">
+        <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/reactnativesample-react-native-push-notification-unspecified_0ef1717495c98b427f90cbb1864d61d00cab0378.jar" />
+    </item>
+    <item
         jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
         jumboMode="false"
         revision="25.0.1"
         sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
         <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_e661ed7dc9b1e1e270073c74f7ab595b8f3c3e07.jar" />
-    </item>
-    <item
-        jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/reactnativesample/react-native-push-notification/unspecified/jars/classes.jar"
-        jumboMode="false"
-        revision="25.0.1"
-        sha1="0ef9e81c70db77c484189c03f5335b721b30185f">
-        <dex dex="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/pre-dexed/debug/reactnativesample-react-native-push-notification-unspecified_0ef1717495c98b427f90cbb1864d61d00cab0378.jar" />
     </item>
     <item
         jar="/Users/zachery/Desktop/react-native-sample/android/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.2.1/jars/classes.jar"

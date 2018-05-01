@@ -6,13 +6,19 @@ class LogoutScreen extends Component {
         super(props);
         this.logBackIn = this.logBackIn.bind(this);
     }
-
+    // Configure the navigation style
     static navigatorStyle = {
         drawUnderNavBar: true,
         navBarComponentAlignment: 'center', // center/fill
         navBarTitleTextCentered: true, // default: false. centers the title.
     };
-
+    
+    /**
+     * @param { }
+     * @name logBackIn
+     * @description 
+     *      onPress, navigate User to the login page
+     */
     logBackIn(){
         this.props.navigator.push({
             screen: 'react-native-sample.LoginScreen',
@@ -26,7 +32,12 @@ class LogoutScreen extends Component {
             }
           });
     }
-
+    /**
+     * @param { }
+     * @name render
+     * @description 
+     *      Render the Interface, must be wrapped in a single View or element.
+     */
     render(){
         return (
             <View style={styles.container}>

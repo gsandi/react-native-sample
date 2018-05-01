@@ -45,7 +45,12 @@ class LoginScreen extends Component {
             console.log('WRONG SIGNIN', err);
           }).done();
     }
-
+    /**
+     * @param { }
+     * @name render
+     * @description 
+     *      Render the Interface, must be wrapped in a single View or element.
+     */
     render(){
         return (
             <View style={styles.container}>
