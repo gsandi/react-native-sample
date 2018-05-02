@@ -1,0 +1,52 @@
+{
+  "name": "react-native-sample",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "server": "nodemon --watch server server/server.js",
+    "debugServer": "set DEBUG=node-gcm & node server/server.js",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "node node_modules/jest/bin/jest.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0",
+    "node-gcm": "^0.14.10",
+    "react": "16.2.0",
+    "react-native": "0.52.0",
+    "react-native-elements": "^1.0.0-beta3",
+    "react-native-google-signin": "^0.12.0",
+    "react-native-push-notification": "^3.0.2",
+    "react-native-vector-icons": "^4.5.0",
+    "react-redux": "^5.0.7",
+    "react-router-native": "^4.2.0",
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^22.4.3",
+    "jest-react-native": "^18.0.0",
+    "nodemon": "^1.17.2",
+    "react-test-renderer": "16.2.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(react-native|react-router-native|react-native-elements|react-native-vector-icons|react-native-google-signin)/)"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
+        "<rootDir>/client/tests/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/client/tests/assetsTransformer.js"
+    },
+    "moduleFileExtensions": ["js", "jsx"],
+    "moduleDirectories": ["node_modules"]
+  }
+}
