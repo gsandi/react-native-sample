@@ -1,20 +1,56 @@
-# react-native-sample
+# React Native Sample
 
-Required functionality. 
---------------------------------
-1. Creation of a react-native application that can be run on android simulator. 
-2. Login page: the login should be authenticated using Google API. 
-3. Welcom page: after the login is successful, there should be a welcome message with the name like 'Good Morning Sam' or 'Good evening Sam' depending on the time. First Name of the person should be pulled from the Google login API. 
-4. Push Notification: Create an local mock server (using express.js) and below the welcome message, place a button which should send a push notification from the mock server with the current time.
-5. Design considerations: The app needs to run on multipe devices.. the elements have to scale per the device. Would be testing on Nexus6P, Pixel2, Pixel2 XL. Styling can use bootstrap or bare CSS. Elements on page should be pleasing to look. :-) 
-6. User logout: There should be option for the user to logout. On logout display a 'Bye!.. see you soon' message
+## Summary
+This is a basic React Native / Redux Application that allows the user to login with google authentication, send a push notification with the current time, and logout.
+* Scrumy was used to manage tasks while creating this application
+* Scrum Kanban Board: [Here](https://scrumy.com/foresees94ulcerate) 
+* Hard Link: [https://scrumy.com/foresees94ulcerate](https://scrumy.com/foresees94ulcerate)
 
-Submitting the code.
-----------------------------------
-1. Fork this repo 
-2. Keep adding files as work progress... add build instructions if any.. (think of non-developer trying to run the app in simulator). Write some help doc as markup file. 
-3. On complete of work and your testing, raise a PR against this master branch. 
+The layout of the application is as follows:
 
+1. Login Screen
+  * Initial screen the user sees upon entering the application.
+  * When the user presses the Sign in button, the user will be directed to the Google Authentication Page where the user will sign in with their google account and give the application permissions to use their profile picture and name.
 
-Happy Coding..you have 7 business days to complete and upload the code. 
+2. Home Screen
+  * The Home screen has two buttons.
+  * The Notification button will send the user an push notification with the current time and date.
+  * The Logout button will sign the user out of the application.
 
+3. Logout Screen
+  * Upon logging out, a goodbye message is displayed on the screen.
+  * A button is on the screen that will allow the user to be redirected to the Login screen to log back into the application.
+  
+## Gif Recorded with Android Studio Native Recorder
+
+![Alt Text](https://github.com/zacharylangley/react-native-sample/blob/master/src/assets/screencap1.gif)
+
+## Prerequisites
+
+1. [Install Android Studio](https://developer.android.com/studio/)
+2. [Install SDK and Emulator Prequisites](https://facebook.github.io/react-native/docs/getting-started.html)
+3. [Install React Native](https://facebook.github.io/react-native/docs/getting-started.html)
+
+## Installation
+1. Open a Terminal or Terminal Emulator
+2. `git clone https://github.com/ZacharyLangley/react-native-sample.git`
+3. Navigate to repository `cd react-native-sample/`
+
+### Server Instructions
+1. Open a Terminal or Terminal Emulator
+2. Navigate to server folder `cd server/`
+3. Run `npm install`
+4. Run `npm run start`
+5. This opens up 10.0.2.2:5000 for the application
+
+### Android Instructions
+1. Open a Terminal or Terminal Emulator
+2. Navigate to root directory `react-native-sample/`
+3. Run `npm install`
+4. Open the Android Virtual Device
+5. Once on the home screen of the device, go to your Terminal
+6. Run `npm run android` or `react-native run-android`
+
+## Troubleshooting
+* Be sure to have the Android Virtual Device open before building and running the application. React Native will not run it otherwise
+* React Native is a new frontier for mobile applications and as such, errors can occur. Restart the application if necessary.
