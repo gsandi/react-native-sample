@@ -1,5 +1,5 @@
 # react-native-sample
-
+anurag
 Required functionality. 
 --------------------------------
 1. Creation of a react-native application that can be run on android simulator. 
