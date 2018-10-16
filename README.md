@@ -1,4 +1,5 @@
 # react-native-sample
+ash
 
 Required functionality. 
 --------------------------------
