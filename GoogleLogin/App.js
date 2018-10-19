@@ -1,75 +1,153 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React, { Component } from 'react';
+import { AppRegistry, StyleSheet, Text, View, Alert, Button,Image } from 'react-native';
 
-import React, {Component} from 'react';
-import { StyleSheet, Text, View,TouchableOpacity,buttonText} from 'react-native';
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 
 
+export default class GoogleSigninSampleApp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userInfo: null,
+      error: null,
+    };
+  }
 
+  async componentDidMount() {
+    this._configureGoogleSignIn();
+    await this._getCurrentUser();
+  }
 
-type Props = {};
-export default class App extends Component<Props> {
-  componentWillMount(){
+  _configureGoogleSignIn() {
     GoogleSignin.configure({
       iosClientId: '469280814728-vvghgphqsuv5dfo1qpcukv2675glsntk.apps.googleusercontent.com',
-    })
+      offlineAccess: false,
+    });
   }
-   
+
+  async _getCurrentUser() {
+    try {
+      const userInfo = await GoogleSignin.signInSilently();
+      this.setState({ userInfo, error: null });
+    } catch (error) {
+      const errorMessage =
+        error.code === statusCodes.SIGN_IN_REQUIRED ? 'Please sign in :)' : error.message;
+      this.setState({
+        error: errorMessage,
+      });
+    }
+  }
+
   render() {
-    return(
-      
-      <View style = {styles.container}>
-    <TouchableOpacity style={styles.buttonContainer} 
-                     onPress={() => {this._callGoogle()}}>
-             <Text  style={styles.buttonText}>LOGIN</Text>
-             </TouchableOpacity>
-             <TouchableOpacity style={styles.buttonContainer} 
-                     onPress={() => {this._logoutGoogle()}}>
-             <Text  style={styles.buttonText}>LOGout</Text>
-             </TouchableOpacity>
-             </View>
+    const { userInfo } = this.state;
+
+    const body = userInfo ? this.renderUserInfo() : this.renderSignInButton();
+    return (
+      <View style={[styles.container, { flex: 1 }]}>
+        {this.renderIsSignedIn()}
+        {body}
+      </View>
     );
   }
-  _callGoogle() {
-    GoogleSignin.signIn().then((user) => {
-   
-        alert('hey '+user.email+ ' logged in!')
-      })
-      .catch((err) => {
-        consol.log('wrong',err);
-      })
-      .done();
-     }
-  _logoutGoogle() {
-    GoogleSignin.signOut().then((user) => {
-        this.setState({ user: null })
-        alert('logout') // Remember to remove the user from your app's state as well
-    })
-      .catch ((err) => {
-        console.log('wrong',err);
-      })
-      .done();
-    }
-  }   
 
+  renderIsSignedIn() {
+    return (
+      <Button
+        onPress={async () => {
+          const isSignedIn = await GoogleSignin.isSignedIn();
+          Alert.alert(String(isSignedIn));
+        }}
+        title="is userssss signed in?"
+      />
+      
+    );
+  }
+
+  renderUserInfo() {
+    const { userInfo } = this.state;
+
+    return (
+      <View style={styles.container}>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 20 }}>
+          Welcome {userInfo.user.name}
+        </Text>
+        <Image
+          style={{width: 150, height: 158}}
+          source={{uri : userInfo.user.photo}}
+        />
+
+        <Button onPress={this._signOut} title="Log out" />
+        {this.renderError()}
+      </View>
+    );
+  }
+
+  renderSignInButton() {
+    return (
+      <View style={styles.container}>
+        <GoogleSigninButton
+          style={{ width: 212, height: 48 }}
+          size={GoogleSigninButton.Size.Standard}
+          color={GoogleSigninButton.Color.Auto}
+          onPress={this._signIn}
+        />
+        {this.renderError()}
+      </View>
+    );
+  }
+
+  renderError() {
+    const { error } = this.state;
+    if (!error) {
+      return null;
+    }
+    const text = `${error.toString()} ${error.code ? error.code : ''}`;
+    return <Text>{text}</Text>;
+  }
+
+  _signIn = async () => {
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      this.setState({ userInfo, error: null });
+    } catch (error) {
+      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        // sign in was cancelled
+        Alert.alert('cancelled');
+      } else if (error.code === statusCodes.IN_PROGRESS) {
+        // operation in progress already
+        Alert.alert('in progress');
+      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        Alert.alert('play services not available or outdated');
+      } else {
+        Alert.alert('Something went wrong', error.toString());
+        this.setState({
+          error,
+        });
+      }
+    }
+  };
+
+  _signOut = async () => {
+    try {
+      await GoogleSignin.revokeAccess();
+      await GoogleSignin.signOut();
+
+      this.setState({ userInfo: null, error: null });
+    } catch (error) {
+      this.setState({
+        error,
+      });
+    }
+  };
+}
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  buttonContainer:{
-    backgroundColor: '#2980b6',
-    paddingVertical: 15
-},
   welcome: {
     fontSize: 20,
     textAlign: 'center',
@@ -80,9 +158,4 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
-  buttonText:{
-    color: '#fff',
-    textAlign: 'center',
-    fontWeight: '700'
-}
 });
