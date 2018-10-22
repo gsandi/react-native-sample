@@ -1,90 +1,158 @@
-
 import React, { Component } from 'react';
-import { Alert, Button, TouchableOpacity, TextInput, StyleSheet, Text, View } from 'react-native';
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import { AppRegistry, StyleSheet, Text, View, Alert, Button,Image } from 'react-native';
+
+import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 
 
-
-export default class App extends Component {
-  
- componentWillMount() {
-    GoogleSignin.configure({
-      iosClientId: '956016367956-anhpekqh6me98mku8hs4100vbbcus5d6.apps.googleusercontent.com'
-    })
-  
-      
+export default class GoogleSigninSampleApp extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userInfo: null,
+      error: null,
+    };
   }
 
+  async componentDidMount() {
+    this._googleConfigure();
+    await this._getUserInfo();
+  }
 
-render() {
-  return (
+  _googleConfigure() {
+    GoogleSignin.configure({
+      iosClientId: '956016367956-anhpekqh6me98mku8hs4100vbbcus5d6.apps.googleusercontent.com’',
+      offlineAccess: false,
+    });
+  }
 
-   
-    <View style={styles.container}>
-      <Text style={styles.welcome}>Welcome</Text>
-   
+  async _getUserInfo() {
+    try {
+      const userInfo = await GoogleSignin.signInSilently();
+      this.setState({ userInfo, error: null });
+    } catch (error) {
+      const errorMessage =
+        error.code === statusCodes.SIGN_IN_REQUIRED ? 'Welcome' : error.message;
+      this.setState({
+        error: errorMessage,
+      });
+    }
+  }
 
-      <TouchableOpacity style={styles.buttonStyle}
-        onPress= {() => this.handleSigninGoogle()}>
-        <Text > Sign in with Google + </Text></TouchableOpacity>
+  render() {
+    const { userInfo } = this.state;
+
+    const body = userInfo ? this.renderUserInfo() : this.renderSignInButton();
+    return (
+      <View style={[styles.container, { flex: 1 }]}>
+      
+      
         
-        <TouchableOpacity style={styles.buttonStyle}
-        onPress= {() => this.handleSignoutGoogle()}>
-        <Text > Sign Out </Text></TouchableOpacity>
-    </View>
+        {body}
+      </View>
+    );
+  }
 
-  );
-}
-handleSigninGoogle() {
-  GoogleSignin.signIn().then((user) => {
-          alert('Hey User, you have successfully logged in')
-          }).catch((err) => {
-            console.log('Wrong signin', err);
-          })
-          .done();
-   
-}
-handleSignoutGoogle() {
-  GoogleSignin.signOut().then((user) => {
-    this.setState({user: null})
-          alert('Hey User, you have successfully logged out')
-          }).catch((err) => {
-            console.log('Wrong signin', err);
-          })
-          .done();
-   
-}
+  
+  renderUserInfo() {
+    const { userInfo } = this.state;
+
+    return (
+      <View style={styles.container}>
+      <Image resize='contain' source={require('/Users/agudala/Projects/react-native-sample/LoginApp/Images/Google_Plus.png')}/>
+        <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 20 }}>
+          Welcome {userInfo.user.name}
+        </Text>
+        <Image
+          style={{width: 150, height: 158}}
+          source={{uri : userInfo.user.photo}}
+        />
+
+        <Button onPress={this._signOut} title="Log out" />
+        {this.renderError()}
+      </View>
+    );
+  }
+
+  renderSignInButton() {
+    return (
+      <View style={styles.container}>
+      <Image resize='contain' source={require('/Users/agudala/Projects/react-native-sample/LoginApp/Images/canva-mountain-photo-travel-quote-desktop-wallpaper-MACEATZU6s0.jpg')}/>
+      
+<GoogleSigninButton style={styles.buttonIcon}
+  
+  style={{width: 215, height: 50}}
+  size={GoogleSigninButton.Size.Icon}
+  color={GoogleSigninButton.Color.Dark}
+  onPress= {this._signIn}/>
+        {this.renderError()}
+      </View>
+    );
+  }
+
+  renderError() {
+    const { error } = this.state;
+    if (!error) {
+      return null;
+    }
+    const text = `${error.toString()} ${error.code ? error.code : ''}`;
+    return <Text>{text}</Text>;
+  }
+
+  _signIn = async () => {
+    try {
+      await GoogleSignin.hasPlayServices();
+      const userInfo = await GoogleSignin.signIn();
+      this.setState({ userInfo, error: null });
+    } catch (error) {
+      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
+        // sign in was cancelled
+        Alert.alert('cancelled');
+      } else if (error.code === statusCodes.IN_PROGRESS) {
+        // operation in progress already
+        Alert.alert('in progress');
+      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
+        Alert.alert('play services not available or outdated');
+      } else {
+        Alert.alert('Something went wrong', error.toString());
+        this.setState({
+          error,
+        });
+      }
+    }
+  };
+
+  _signOut = async () => {
+    try {
+      await GoogleSignin.revokeAccess();
+      await GoogleSignin.signOut();
+
+      this.setState({ userInfo: null, error: null });
+    } catch (error) {
+      this.setState({
+        error,
+      });
+    }
+  };
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#fcb941',
   },
   welcome: {
-    fontSize: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  input: {
-    width: 200,
     fontSize: 20,
-    borderColor: 'black',
-    padding: 10,
-    marginVertical: 10,
-    borderWidth: 1,
-
+    textAlign: 'center',
+    margin: 10,
   },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+  button : {
+    color: '#c8f7c5'
 
-  buttonStyle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#FFF',
-    borderRadius: 5,
-    backgroundColor: 'yellow',
-    padding: 8
   }
 });
-
