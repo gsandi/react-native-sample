@@ -9,7 +9,7 @@ class Welcome extends React.Component {
         return (
       
 <View style = {styles.container}> 
-<Text style = {styles.welcome} > Welcome Sam </Text>
+<Text style = {styles.welcome} > Welcome Ash </Text>
 
 <TouchableOpacity style={styles.button}>
        
