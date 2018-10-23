@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Alert, Button,Image } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Alert, Button,Image,TouchableOpacity } from 'react-native';
 
 import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-google-signin';
 import styles from '/Users/amudamula/reactprojects/react-native-sample/GoogleLogin/Components/Loginscreens/styles.js';
 
-
+const btnImage = require('/Users/amudamula/reactprojects/react-native-sample/GoogleLogin/Images/Icon.png');
 export default class Login extends Component {
   state = {
     userinfo: {}
@@ -27,13 +27,9 @@ export default class Login extends Component {
       <View style={[styles.container, { flex: 1 }]}>
       <View style={styles.container}>
       <Text> Hello :) </Text>
-      
-      <GoogleSigninButton
-        style={{ width: 212, height: 48 }}
-        size={GoogleSigninButton.Size.Wide}
-        color={GoogleSigninButton.Color.Auto}
-        onPress={this._signIn}
-      />
+      <TouchableOpacity onPress={this._signIn}>
+          <Image style={styles.btn} source={btnImage} />
+        </TouchableOpacity>
       <Text> Click here!</Text>
       {this.renderError()}
       </View>
