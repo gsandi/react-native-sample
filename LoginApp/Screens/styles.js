@@ -12,16 +12,27 @@ fontSize: 25,
 
 export default styles = StyleSheet.create ({
     container : {
-        flex: 1,
+        flex:1,
         justifyContent: 'center',
         alignItems : 'center',
-        backgroundColor: 'white',
+        backgroundColor: '#a96dad',
     },
     signInButton : Object.assign ({
         marginTop: 25,
         backgroundColor: '#d14836',
        
     }, button),
+    welcomeBackground : {
+      position : 'absolute',
+        left : 0,
+        right : 0,
+        bottom : 0,
+        top: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
+   
+
+    },
    
     LoginPageButton : {
         marginTop: 5,
@@ -39,5 +50,18 @@ export default styles = StyleSheet.create ({
         margin: 20,
         backgroundColor:'#d14836',
       }, button),
-   
+  
+   background : {
+    flex: 1,
+    position : 'absolute',
+    left : 0,
+    right : 0,
+    bottom : 0,
+    top: 0,
+    width: '300%',
+    height: '400%',
+
+    
+   },
 })
+
