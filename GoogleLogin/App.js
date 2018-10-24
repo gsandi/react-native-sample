@@ -10,6 +10,7 @@ import {createStackNavigator} from 'react-navigation';
 //import configureStore from './src/store/configureStore';
 import Login from './Components/Loginscreens/index.js';
 import Welcome from './Components/WelcomeScreen/index.js';
+import Logout from "/Users/amudamula/reactprojects/react-native-sample/GoogleLogin/Components/Logout/index.js"
 
 const RootStack = createStackNavigator(
   {
@@ -25,6 +26,12 @@ const RootStack = createStackNavigator(
         header: null
       }
     },
+    Logout: {
+      screen: Logout,
+      navigationOptions:{
+        header: null
+      }
+    }
   },
     {
       initialRouteName: 'Login'

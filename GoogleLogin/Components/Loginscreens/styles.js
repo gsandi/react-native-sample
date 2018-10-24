@@ -7,12 +7,15 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'grey'
   },
+  container2: {
+   position : 'absolute',
+    bottom: 0
+  },
   welcome: {
-    fontSize: 40,
-    textAlign: 'center',
+    fontSize: 80,
     marginBottom: 25,
     fontWeight: 'bold',
-    color: '#fff'
+    color: 'white'
   },
   background: {
     position: 'absolute',
@@ -23,9 +26,33 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+    backgroundImage: {
+        flex: 1,
+        width: null,
+        height: null,
+        resizeMode: 'cover'
+    },
+    buttonContainer:{
+      backgroundColor: 'transparent',
+      paddingVertical: 15
+  },
+  bottom: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    marginBottom: 36
+  },
+
+    text: {
+        textAlign: 'center',
+        color: 'white',
+        backgroundColor: 'rgba(0,0,0,0)',
+        fontSize: 32
+    },
   btn: {
     height: 50,
     width: 250,
-    marginBottom: 55
+    marginBottom: 55,
+  
+    bottom: 0
   }
 });
