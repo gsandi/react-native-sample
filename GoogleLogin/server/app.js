@@ -1,51 +1,47 @@
 const express = require('express');
-const axios = require('axios');
 const bodyParser = require('body-parser');
+const gcm = require('node-gcm');
+const moment = require('moment');
 
-//Create an instance of the express server
+// Constants and Variable Declarations
+const apiKey = 'AIzaSyAlPaMFQv7TyMO4SM1wdP60wiSDDxqynns';
+const sender = new gcm.Sender(apiKey);
+let message = new gcm.Message();
+let registrationIds;
+moment.locale();
+
+// App Configuration
 const app = express();
-
 app.use(bodyParser.json());
-
-// visit localhost:3000/test from browser to make sure server is running
-app.get('/test', (req, res) => {
-  res.send('Server is ready to send push notifications!');
-});
-
-//push notication
-app.post('/push', async (req, res) => {
-  const currentTime = new Date().toString();
-
-//Setting the headers to call the OneSignal REST API
-  const headers = {
-    'Content-Type': 'application/json; charset=utf-8',
-    Authorization: 'Basic ZTllMWQ0MGMtMmQ2OS00ZWFlLWFmODEtMTQxYjczZmU3ZTMw'
-  };
-
-//Setting the body for the API, along with the device ID to whom
-//the notification must be sent.
-  const body = {
-    app_id: 'cdca582d-9e96-4e04-9c2a-8d060433aae3',
-    contents: { en: currentTime },
-    include_player_ids: [req.body.oneSignalUserId]
-  };
-
-  const config = {
-    headers
-  };
-
-//Call to the REST API with the headers and the body
-  try {
-    const response = await axios.post(
-      'https://onesignal.com/api/v1/notifications',
-      body,
-      config
+/**
+ * @param { '/getnotification', (req, res, next) }
+ * @name get
+ * @description 
+ *     serve notification when route is fetched
+ */
+app.get('/getnotification', (req , res, next) => {
+  console.log("helpp");
+    message.addData('time', moment().format('LT'));
+    message.delay_while_idle = 1;
+    sender.send(message, registrationIds, 4, function (result) {
+      console.log(result);
+    }
     );
+    next()
+})
+/**
+ * @param { '/', (req, res, next) }
+ * @name post
+ * @description 
+ *     Add Token to registeredID's for future use
+ */
+app.post('/', (req , res, next) => {
+    if(!req.body.token) {
+      return res.status(400)
+    }
+    registrationIds = [req.body.token];
+    next()
+})
 
-    res.status(200).send({ response });
-  } catch (error) {
-    res.status(422).send({ error });
-  }
-});
-
-app.listen(3000, () => console.log('App listening on port 3000!'));
+const port = process.env.PORT || 3000
+app.listen(port, () => console.log(`Listening on port ${port}`))

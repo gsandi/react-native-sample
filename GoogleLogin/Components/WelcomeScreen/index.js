@@ -9,19 +9,19 @@ import { GoogleSignin, GoogleSigninButton, statusCodes } from 'react-native-goog
 import styles from '/Users/amudamula/reactprojects/react-native-sample/GoogleLogin/Components/Loginscreens/styles.js';
 import PushNotification from 'react-native-push-notification';
 import PushController from '/Users/amudamula/reactprojects/react-native-sample/GoogleLogin/Components/pushnotifications.js';
+import { notification } from '/Users/amudamula/reactprojects/react-native-sample/GoogleLogin/Components/notifications.js';
 const backgroundImage = require('/Users/amudamula/reactprojects/react-native-sample/GoogleLogin/Images/WelcomeBackground.jpg');
 
 export default class Welcome extends Component {
     state = {
         userInfo: {},
      }
+ 
      componentDidMount() {
-      AppState.addEventListener('change', this.handleAppStateChange);
-    };
-    
-    componentWillUnmount() {
-      AppState.removeEventListener('change', this.handleAppStateChange);
-    };
+      notification.init()
+      console.log("hellop")
+     }
+   
 handleGreeting(){
   const today = new Date();
     const curHr = today.getHours();
@@ -42,7 +42,12 @@ handleGreeting(){
     PushNotification.localNotification({
       message: 'You pushed the notification button!'
     });
+
   };
+  getTimeNotification(){
+    notification.postNotificationToken();
+    notification.getTime();
+  }
 
     render(){
       
@@ -72,7 +77,17 @@ handleGreeting(){
         <Button onPress={this._signOut} title="Log out" />
         <Button title='Press here for a notification'
           onPress={this.sendNotification} />
-        <PushController />
+           <TouchableOpacity style={styles.button} onPress={this.signOut}>
+                    <Text style={styles.buttonText}>Sign Out</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={this.getTimeNotification}>
+                    <Text style={styles.buttonText}>Send Notification</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button} onPress={this.sendNotification}>
+                    <Text style={styles.buttonText}> Notification</Text>
+                </TouchableOpacity>
+           
+        
 
         
         
