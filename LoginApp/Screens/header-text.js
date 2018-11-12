@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {Text} from 'react-native';
-import styles from './styles';
+import styles from '../Styles/styles';
 
 export default class HeaderText extends React.Component {
   render() {

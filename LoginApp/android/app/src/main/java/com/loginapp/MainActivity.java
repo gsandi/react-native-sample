@@ -1,5 +1,6 @@
 package com.loginapp;
 
+
 import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
@@ -13,3 +14,6 @@ public class MainActivity extends ReactActivity {
         return "LoginApp";
     }
 }
+
+
+

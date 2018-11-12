@@ -1,9 +1,7 @@
 
 export const _googleConfigure = {
-   iosClientId: '956016367956-anhpekqh6me98mku8hs4100vbbcus5d6.apps.googleusercontent.com',
-    offlineAccess: false,
-    shouldFetchBasicProfie : true,
-    scopes : ['openid', 'email', 'profile'],
+  iOSClientId: '863721276192-jh6vgehe0as6btdgt6gulghf9166u3cq.apps.googleusercontent.com',
+  
 
 }
  

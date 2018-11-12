@@ -1,7 +1,7 @@
 import React from 'react' ;
-import {View, Button} from 'react-native';
+import {View, Button, Text, TouchableOpacity} from 'react-native';
 import HeaderText from './header-text';
-import styles from './styles';
+import styles from '/Users/agudala/Projects/react-native-sample/LoginApp/Styles/styles.js';
 
 export default class Logout extends React.Component{
     navigateToLoginPage() {
@@ -10,10 +10,12 @@ export default class Logout extends React.Component{
 render() {
     return (
         <View style = {styles.container}>
+        
         <HeaderText text="Bye..see you soon :)"/>
-        <Button style = {styles.LoginPageButton} onPress = {this.navigateToLoginPage.bind(this)}
-        title ='logout->home page'>
-        </Button>
+        <TouchableOpacity style = {styles.LoginPageButton} onPress={()=> this.navigateToLoginPage()}
+      >
+      <Text> logout->home page</Text>
+        </TouchableOpacity>
         
         </View>
     );

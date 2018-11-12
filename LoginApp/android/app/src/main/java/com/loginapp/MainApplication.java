@@ -2,6 +2,7 @@ package com.loginapp;
 
 import android.app.Application;
 
+
 import com.facebook.react.ReactApplication;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
@@ -47,3 +48,4 @@ public class MainApplication extends Application implements ReactApplication {
     SoLoader.init(this, /* native exopackage */ false);
   }
 }
+

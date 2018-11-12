@@ -1,7 +1,18 @@
-# react-native-sample
-ash
+React-Native Sample Login App
+An app which uses google authentication to login and directed to a welcome page with a push notification which tells the current time of the day with a Greeting!
 
-Required functionality. 
+Requirements
+- IOS Simulator
+- React Native
+
+
+
+
+
+
+
+
+
 --------------------------------
 1. Creation of a react-native application that can be run on android simulator. 
 2. Login page: the login should be authenticated using Google API. 

@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>956016367956-anhpekqh6me98mku8hs4100vbbcus5d6.apps.googleusercontent.com</string>
+	<string>863721276192-jh6vgehe0as6btdgt6gulghf9166u3cq.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.956016367956-anhpekqh6me98mku8hs4100vbbcus5d6</string>
+	<string>com.googleusercontent.apps.863721276192-jh6vgehe0as6btdgt6gulghf9166u3cq</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDFsIunNG1b3879ciwYT6LukWdgPqSmiLk</string>
+	<string>AIzaSyA6076UZW6v6vV3Nvz3H8o0iOBROEsvwRQ</string>
 	<key>GCM_SENDER_ID</key>
-	<string>956016367956</string>
+	<string>863721276192</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>org.reactjs.native.example.LoginApp</string>
+	<string>com.loginapp</string>
 	<key>PROJECT_ID</key>
-	<string>loginapp-47fcc</string>
+	<string>loginapp-2d203</string>
 	<key>STORAGE_BUCKET</key>
-	<string>loginapp-47fcc.appspot.com</string>
+	<string>loginapp-2d203.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:956016367956:ios:843e43ea56903649</string>
+	<string>1:863721276192:ios:cc6eb3d69439a31e</string>
 	<key>DATABASE_URL</key>
-	<string>https://loginapp-47fcc.firebaseio.com</string>
+	<string>https://loginapp-2d203.firebaseio.com</string>
 </dict>
 </plist>
